@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Trang chủ</title>
+</head>
+<body>
+  <div id="page-content"></div>
+
+  <ul>
+    <li><a href="#" onclick="loadPage1()">Trang 1</a></li>
+    <li><a href="#" onclick="loadPage2()">Trang 2</a></li>
+  </ul>
+
+  <script>
+    function loadPage1() {
+      $.ajax({
+        url: 'page1.html',
+        success: function(data) {
+          $('#page-content').html(data);
+        }
+      });
+    }
+
+    function loadPage2() {
+      $.ajax({
+        url: 'page2.html',
+        success: function(data) {
+          $('#page-content').html(data);
+        }
+      });
+    }
+  </script>
+</body>
+</html>
